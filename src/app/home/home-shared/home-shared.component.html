@@ -1,3 +1,22 @@
-<p>
-  home-shared works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <label for="">Title</label>
+        <input
+          [(ngModel)]="data.title"
+          type="text"
+          class="form-control"
+        />
+        <label for="">Description</label>
+        <input
+          [(ngModel)]="data.text"
+          type="text"
+          name=""
+          class="form-control"
+        />
+        <button (click)="save.emit()" type="button" class="mt-2 float-right btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

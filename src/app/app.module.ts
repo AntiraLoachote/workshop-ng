@@ -1,15 +1,15 @@
 import { AppRoutes } from "./app.routing";
-import { HomeComponent } from "./home/home.component";
-import { HomeModule } from "./home/home.module";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
+import { LoginComponent } from "./login/login.component";
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
-  imports: [BrowserModule, AppRoutingModule, HomeModule, AppRoutes],
+  declarations: [AppComponent, LoginComponent],
+  imports: [BrowserModule, AppRoutingModule, AppRoutes, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
 })

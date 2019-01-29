@@ -1,3 +1,35 @@
-<p>
-  home-list works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col text-right">
+      <button
+        type="button"
+        class="mb-3 btn btn-primary text-right"
+        [routerLink]="['create']">
+        Create
+    </button>
+    </div>
+  </div>
+  <div *ngFor="let item of data | async" class="card mb-2" [routerLink]="['/home/detail', item.id]">
+    <img class="card-img-top" src="holder.js/100px180/" alt="">
+    <div class="card-body">
+      <h4 class="card-title">{{item.title}}</h4>
+      <p class="card-text">{{item.text}} <span *ngIf="item.is_anonymous" class="float-right">author</span></p>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="container">
+  <div class="row no-gutters"><div class="col bg-primary">1</div></div>
+  <div class="row no-gutters">
+    <div class="col-12 col-md-6">
+      <div class="row no-gutters">
+        <div class="col-12 col-md-6 bg-info">2</div>
+        <div class="col-12 col-md-6 bg-warning">3</div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6">
+      <div class="col-12 bg-danger">4</div>
+      <div class="col-12 bg-dark">5</div>
+    </div>
+  </div>
+</div> -->
